@@ -5,11 +5,15 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       <title>FinApp</title>
+      <link
+         href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700&display=swap"
+         rel="stylesheet"
+      />
       <link rel="stylesheet" href="css/tailwind.css" />
       <link rel="stylesheet" href="css/main.css" />
    </head>
-   <body>
-      <div class="cs-hero h-screen relative">
+   <body class="font-nunitoSans">
+      <div class="cs-hero relative">
          <header
             class="flex justify-between items-center p-6 border-b border-gray-500"
          >
@@ -39,8 +43,36 @@
                </li>
             </ul>
          </div>
-         <main class="">
-            <h1>The future of online banking</h1>
+         <main class="px-6">
+            <div class="mt-8">
+               <h1
+                  class="text-5xl text-white text-center font-bold leading-tight"
+               >
+                  The future of online banking
+               </h1>
+               <p class="mt-4 mb-10 text-sm text-gray-300 text-center">
+                  Make your life easier with FinApp. With FinApp you have the
+                  flexibility to send and receive money in seconds and
+                  Mastercards on-the-fly so you can do with your money whatever
+                  you want, wherever you are. Store your contacts so you can
+                  skip the hassle and pay them right away. Worried you'd spend
+                  too much money? FinApp will notify you when you're about to go
+                  over your monthly limit. Download the app from the Apple App
+                  Store or Google Play today.
+               </p>
+               <button
+                  class="block w-48 mx-auto px-6 py-3 bg-white rounded text-blue-700 font-bold"
+               >
+                  Discover Features
+               </button>
+            </div>
+            <div>
+               <img
+                  src="images/iphone.png"
+                  alt="FinApp on an iPhone X"
+                  class="w-3/4 mx-auto mt-32"
+               />
+            </div>
          </main>
       </div>
 
