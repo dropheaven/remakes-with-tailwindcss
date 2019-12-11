@@ -1,0 +1,33 @@
+.cs-hero {
+   background-image: url("../images/bg.svg");
+   background-size: cover;
+   background-position: 0px 0px;
+}
+
+@keyframes down {
+   from {
+      transform: translateY(-100px);
+   }
+   to {
+      transform: translateY(0);
+   }
+}
+
+@keyframes up {
+   from {
+      transform: translateY(0);
+   }
+   to {
+      transform: translateY(-200px);
+   }
+}
+
+.slideDown {
+   animation-name: down;
+   animation-duration: 300ms;
+}
+
+.slideUp {
+   animation-name: up;
+   animation-duration: 300ms;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>FinApp</title>
+      <link rel="stylesheet" href="css/tailwind.css" />
+      <link rel="stylesheet" href="css/main.css" />
+   </head>
+   <body>
+      <div class="cs-hero h-screen">
+         <header
+            class="flex justify-between items-center p-6 border-b border-gray-500"
+         >
+            <a>
+               <img src="images/logo.svg" alt="FinApp logo" class="h-8" />
+            </a>
+            <nav>
+               <div onclick="triggerMenu()">
+                  <img src="images/menu.svg" alt="menu" class="h-5" />
+               </div>
+            </nav>
+         </header>
+         <!-- menu items - not inside of <nav> because of the flex parent shrinking the width -->
+         <div class="hidden relative overflow-hidden h-48" id="menu">
+            <ul
+               class="flex flex-col items-center bg-white absolute z-10 w-screen"
+               id="menu-items"
+            >
+               <li class="my-4 text-gray-700 font-semibold text-sm">
+                  <a href="">Home</a>
+               </li>
+               <li class="my-4 text-gray-700 font-semibold text-sm">
+                  <a href="">Features</a>
+               </li>
+               <li class="my-4 text-gray-700 font-semibold text-sm">
+                  <a href="">Pricing</a>
+               </li>
+            </ul>
+         </div>
+         <main class="">
+            <h1>The future of online banking</h1>
+         </main>
+      </div>
+
+      <script>
+         function triggerMenu() {
+            const menu = document.getElementById("menu");
+            const items = document.getElementById("menu-items");
+
+            if ([...menu.classList].includes("hidden")) {
+               menu.classList.remove("hidden");
+               items.classList.remove("slideUp");
+               items.classList.add("slideDown");
+            } else {
+               items.classList.add("slideUp");
+               setTimeout(() => menu.classList.add("hidden"), 300);
+               items.classList.remove("slideDown");
+            }
+         }
+      </script>
+   </body>
+</html>
