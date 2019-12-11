@@ -22,12 +22,12 @@
    }
 }
 
-.slideDown {
+.cs-slideDown {
    animation-name: down;
-   animation-duration: 300ms;
+   animation-duration: 400ms;
 }
 
-.slideUp {
+.cs-slideUp {
    animation-name: up;
-   animation-duration: 300ms;
+   animation-duration: 400ms;
 }
