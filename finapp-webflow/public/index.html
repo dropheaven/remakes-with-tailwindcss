@@ -9,7 +9,7 @@
       <link rel="stylesheet" href="css/main.css" />
    </head>
    <body>
-      <div class="cs-hero h-screen">
+      <div class="cs-hero h-screen relative">
          <header
             class="flex justify-between items-center p-6 border-b border-gray-500"
          >
@@ -23,10 +23,10 @@
             </nav>
          </header>
          <!-- menu items - not inside of <nav> because of the flex parent shrinking the width -->
-         <div class="hidden relative overflow-hidden h-48" id="menu">
+         <div class="hidden overflow-hidden absolute h-48" id="menu">
             <ul
-               class="flex flex-col items-center bg-white absolute z-10 w-screen"
-               id="menu-items"
+               class="flex flex-col items-center bg-white w-screen"
+               id="menu-list"
             >
                <li class="my-4 text-gray-700 font-semibold text-sm">
                   <a href="">Home</a>
@@ -47,16 +47,16 @@
       <script>
          function triggerMenu() {
             const menu = document.getElementById("menu");
-            const items = document.getElementById("menu-items");
+            const list = document.getElementById("menu-list");
 
             if ([...menu.classList].includes("hidden")) {
                menu.classList.remove("hidden");
-               items.classList.remove("slideUp");
-               items.classList.add("slideDown");
+               list.classList.remove("cs-slideUp");
+               list.classList.add("cs-slideDown");
             } else {
-               items.classList.add("slideUp");
+               list.classList.add("cs-slideUp");
                setTimeout(() => menu.classList.add("hidden"), 300);
-               items.classList.remove("slideDown");
+               list.classList.remove("cs-slideDown");
             }
          }
       </script>
